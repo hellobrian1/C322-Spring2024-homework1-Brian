@@ -52,29 +52,6 @@ public class Guitar {
 
 
 
-    public static void main(String[] args) {
-        // Instantiate an inventory
-        Inventory inventory = new Inventory();
-
-        // Add some guitars to the inventory
-        inventory.addGuitar("G123", 999.99, "Gibson", "Les Paul", "Electric", "Mahogany", "Maple");
-        inventory.addGuitar("F456", 799.99, "Fender", "Stratocaster", "Electric", "Alder", "Maple");
-        inventory.addGuitar("T789", 699.99, "Taylor", "Acoustic", "Acoustic", "Rosewood", "Spruce");
-
-        // Display the current inventory
-        System.out.println("Current Inventory:");
-        displayInventory(inventory);
-
-        // Search for a guitar in the inventory
-        Guitar searchedGuitar = inventory.search("F456");
-        if (searchedGuitar != null) {
-            System.out.println("\nFound Guitar:");
-            displayGuitar(searchedGuitar);
-        } else {
-            System.out.println("\nGuitar not found in inventory.");
-        }
-    }
-
     private static void displayInventory(Inventory inventory) {
         for (Guitar guitar : inventory.getGuitars()) {
             displayGuitar(guitar);
@@ -91,8 +68,4 @@ public class Guitar {
         System.out.println("Top Wood: " + guitar.getTopWood());
         System.out.println("------------------------");
     }
-
-
-
-
 }

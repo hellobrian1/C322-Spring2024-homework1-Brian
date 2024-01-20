@@ -34,6 +34,7 @@ public class Inventory {
     }
 
     public List<Guitar> getGuitars() {
+        System.out.println(guitars);
         return guitars;
     }
 
