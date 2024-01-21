@@ -29,9 +29,6 @@ public class Inventory {
                 return guitar;
             }
         }
-//        // If not found in memory, try to read from the text file
-//        Guitar guitarFromFile = getGuitarFromFile(serialNumber);
-//        return guitarFromFile;
         return null;
     }
 
@@ -52,7 +49,7 @@ public class Inventory {
             e.printStackTrace();
         }
 
-        // Return null if not found in the file
+
         return null;
     }
 

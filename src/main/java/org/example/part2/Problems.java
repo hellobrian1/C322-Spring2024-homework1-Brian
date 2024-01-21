@@ -85,6 +85,8 @@ public class Problems {
             default: return 0;
         }
     }
+
+    // problem 5
     static boolean isValid(String s) {
         int n = s.length();
         if (n % 2 != 0) {
@@ -106,6 +108,8 @@ public class Problems {
         }
         return stack.isEmpty();
     }
+
+    // problem 6
     public static Problems.ListNode mergeTwoLists(Problems.ListNode list1, Problems.ListNode list2) {
         if(list1!=null && list2!=null)
         {
@@ -135,6 +139,7 @@ public class Problems {
 
     }
 
+    // problem 7
     static int[] plusOne(int[] digits) {
         int n = digits.length;
         for (int i = n - 1; i >= 0; i--) {

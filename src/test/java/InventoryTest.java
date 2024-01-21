@@ -55,7 +55,7 @@ public class InventoryTest {
 
         // Asserting that the details of the retrieved guitar match the added guitar
         assertEquals("123", retrievedGuitar.getSerialNumber());
-        assertEquals(1000.0, retrievedGuitar.getPrice(), 0.001); // Using delta for double comparison
+        assertEquals(1000.0, retrievedGuitar.getPrice(), 0.001);
         assertEquals("Builder1", retrievedGuitar.getBuilder());
         assertEquals("Model1", retrievedGuitar.getModel());
         assertEquals("Type1", retrievedGuitar.getType());
@@ -93,7 +93,7 @@ public class InventoryTest {
         assertNotNull(retrievedGuitar2);
         assertNotNull(retrievedGuitar3);
 
-        // Asserting that the details of the retrieved guitars match the added guitars
+
         assertEquals("123", retrievedGuitar1.getSerialNumber());
         assertEquals(1000.0, retrievedGuitar1.getPrice(), 0.001);
         assertEquals("Builder1", retrievedGuitar1.getBuilder());
@@ -139,13 +139,9 @@ public class InventoryTest {
         String backWood = "Maple";
         String topWood = "Alder";
 
-        // Add a guitar to the file
+
         inventory.addGuitar(serialNumber, price, builder, model, type, backWood, topWood);
-
-        // Act
         Guitar guitarFromFile = inventory.getGuitarFromFile(serialNumber);
-
-        // Assert
         assertNotNull(guitarFromFile);
         assertEquals(serialNumber, guitarFromFile.getSerialNumber());
         assertEquals(price, guitarFromFile.getPrice());

@@ -1,4 +1,6 @@
 package org.example.part3;
+
+
 public class Guitar {
     private String serialNumber;
     private double price;

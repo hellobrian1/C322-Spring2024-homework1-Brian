@@ -48,7 +48,7 @@ public class GuitarTest {
 
     @Test
     public void testGetGuitarNotFound() {
-        // Assuming "999" is a serial number that doesn't exist in memory or in the file
+
         Guitar guitar = inventory.getGuitar("999");
         assertNull(guitar);
     }
