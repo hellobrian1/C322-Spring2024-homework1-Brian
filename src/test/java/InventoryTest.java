@@ -127,6 +127,34 @@ public class InventoryTest {
         assertEquals(1000.0, retrievedGuitar.getPrice(), 0.001);
 
     }
+    @Test
+    void getGuitarFromFile() {
+        // Arrange
+        Inventory inventory = new Inventory();
+        String serialNumber = "123";
+        double price = 999.99;
+        String builder = "Fender";
+        String model = "Stratocaster";
+        String type = "Electric";
+        String backWood = "Maple";
+        String topWood = "Alder";
+
+        // Add a guitar to the file
+        inventory.addGuitar(serialNumber, price, builder, model, type, backWood, topWood);
+
+        // Act
+        Guitar guitarFromFile = inventory.getGuitarFromFile(serialNumber);
+
+        // Assert
+        assertNotNull(guitarFromFile);
+        assertEquals(serialNumber, guitarFromFile.getSerialNumber());
+        assertEquals(price, guitarFromFile.getPrice());
+        assertEquals(builder, guitarFromFile.getBuilder());
+        assertEquals(model, guitarFromFile.getModel());
+        assertEquals(type, guitarFromFile.getType());
+        assertEquals(backWood, guitarFromFile.getBackWood());
+        assertEquals(topWood, guitarFromFile.getTopWood());
+    }
 
 
 }

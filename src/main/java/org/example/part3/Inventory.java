@@ -29,12 +29,13 @@ public class Inventory {
                 return guitar;
             }
         }
-        // If not found in memory, try to read from the text file
-        Guitar guitarFromFile = getGuitarFromFile(serialNumber);
-        return guitarFromFile;
+//        // If not found in memory, try to read from the text file
+//        Guitar guitarFromFile = getGuitarFromFile(serialNumber);
+//        return guitarFromFile;
+        return null;
     }
 
-    private Guitar getGuitarFromFile(String serialNumber) {
+    public Guitar getGuitarFromFile(String serialNumber) {
         try (BufferedReader reader = new BufferedReader(new FileReader("guitar_inventory.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
