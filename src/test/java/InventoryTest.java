@@ -127,4 +127,6 @@ public class InventoryTest {
         assertEquals(1000.0, retrievedGuitar.getPrice(), 0.001);
 
     }
+
+
 }

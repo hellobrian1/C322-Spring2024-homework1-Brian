@@ -1,9 +1,5 @@
 package org.example.part3;
-
-
-
 public class Guitar {
-
     private String serialNumber;
     private double price;
     private String builder;
@@ -11,7 +7,6 @@ public class Guitar {
     private String type;
     private String backWood;
     private String topWood;
-
     public Guitar(String serialNumber, double price, String builder, String model, String type, String backWood, String topWood) {
         this.serialNumber = serialNumber;
         this.price = price;
@@ -21,37 +16,27 @@ public class Guitar {
         this.backWood = backWood;
         this.topWood = topWood;
     }
-
     public String getSerialNumber() {
         return serialNumber;
     }
-
     public double getPrice() {
         return price;
     }
-
     public String getBuilder() {
         return builder;
     }
-
     public String getModel() {
         return model;
     }
-
     public String getType() {
         return type;
     }
-
     public String getBackWood() {
         return backWood;
     }
-
     public String getTopWood() {
         return topWood;
     }
-
-
-
     private static void displayInventory(Inventory inventory) {
         for (Guitar guitar : inventory.getGuitars()) {
             displayGuitar(guitar);
